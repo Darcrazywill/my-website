@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея изображений</title>
+    <style>
+        .gallery-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .gallery-image {
+            max-width: 100%;
+            max-height: 500px;
+            margin-bottom: 20px;
+            border: 3px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .gallery-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .gallery-nav button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .gallery-nav button:hover {
+            background-color: #45a049;
+        }
+        
+        .gallery-nav button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        
+        .image-counter {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>Галерея изображений</h1>
+        
+        <div class="gallery-nav">
+            <button id="prev-btn" disabled>Назад</button>
+            <button id="next-btn">Вперед</button>
+        </div>
+        
+        <img id="gallery-image" class="gallery-image" src="" alt="Галерея изображений">
+        
+        <div class="image-counter">
+            <span id="current-img">1</span> из <span id="total-imgs">0</span>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
